@@ -1,6 +1,23 @@
 <h2>Posts</h2>
+<% total_count = @posts.size %>
+<% if total_count == 0 %>
+  No posts!! Sorry!!
+  <% else %>
+  Total : <%= total_count %>
+  <% end %>
 <table>
-	<th>Name</th>
-	<th>Title</th>
-	<th>Content</th>
+  <thead>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+  </thead>
+  <tbody>
+    <% for post in @posts %>
+      <tr>
+        <td> <%= post.name %> </td>
+        <td> <%= post.title %> </td>
+        <td> <%= post.content %> </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
