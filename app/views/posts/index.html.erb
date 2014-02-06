@@ -14,10 +14,15 @@
   <tbody>
     <% for post in @posts %>
       <tr>
-        <td> <%= post.name %> </td>
+        <td> <%= in_upcase(post.name) %> </td>
         <td> <%= post.title %> </td>
-        <td> <%= post.content %> </td>
+        <td> <%= post.content %> </td>&nbsp;&nbsp;&nbsp;
+        <td> <%=link_to 'View', post_path(post.id)%> |
+        <td> <%=link_to 'Edit', edit_post_path(post.id)%> |
+        <td> <%=link_to 'Delete', post_path(post.id), :method => 'delete'%>
       </tr>
     <% end %>
   </tbody>
 </table>
+<hr/>
+<%=link_to 'Add Post', new_post_path %>

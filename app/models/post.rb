@@ -4,4 +4,5 @@ class Post < ActiveRecord::Base
   validates :name,  :presence => true
   validates :title, :presence => true,
                     :length => { :minimum => 5 }
+  validates_presence_of :content, :message => "Put some content please" 
 end

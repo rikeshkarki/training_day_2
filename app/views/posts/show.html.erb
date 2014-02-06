@@ -1,2 +1,6 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>Show Details</h1>
+<hr/>
+Name : <%= @post.name %></br>
+Title : <%= @post.title %></br>
+Content : <%= @post.content %></br>
+<%=link_to 'Back to List', posts_path %>

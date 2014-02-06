@@ -1,13 +1,13 @@
 Blog::Application.routes.draw do
-  get "posts/index"
+  # get "posts/index"
 
-  get "posts/new"
+  # get "posts/new"
 
-  get "posts/show"
+  # get "posts/show"
 
-  get "posts/edit"
+  # get "posts/edit"
 
-  get "home/index"
+  # get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
